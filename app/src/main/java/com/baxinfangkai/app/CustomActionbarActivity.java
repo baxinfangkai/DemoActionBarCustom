@@ -2,6 +2,7 @@ package com.baxinfangkai.app;
 
 import java.util.Locale;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
@@ -92,6 +93,11 @@ public class CustomActionbarActivity extends ActionBarActivity implements Action
         int id = item.getItemId();
         if (id == R.id.action_settings) {
             return true;
+        }
+        if(id == R.id.action_forward_custom_dlg){
+            Intent intent = new Intent();
+            intent.setClassName(this, CustomDialogActivity.class.getName());
+            startActivity(intent);
         }
         return super.onOptionsItemSelected(item);
     }
