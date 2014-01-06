@@ -2,64 +2,61 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:minWidth="280dip"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:minWidth="@dimen/fobme_dialog_minwidth"
+    android:background="@drawable/fobme_dialog_bg">
 
-    <LinearLayout 
+    <LinearLayout
         android:orientation="vertical"
-        android:background="@drawable/header"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
-    
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
         <TextView
             style="@style/DialogText.Title"
             android:id="@+id/title"
-            android:paddingRight="8dip"
-            android:paddingLeft="8dip"
-            android:background="@drawable/title"
+            android:gravity="center"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-    
+            android:layout_height="wrap_content" />
+
+        <TextView style="@style/Dialog.LineH" />
+
     </LinearLayout>
 
-    <LinearLayout 
+    <LinearLayout
         android:id="@+id/content"
         android:orientation="vertical"
-        android:background="@drawable/center"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
-    
+
         <TextView
             style="@style/DialogText"
             android:id="@+id/message"
-            android:padding="5dip"
+            android:padding="@dimen/fobme_dialog_content_text_padding"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"/>
-    
+            android:layout_height="wrap_content" />
+        <TextView style="@style/Dialog.LineH" />
     </LinearLayout>
 
-    <LinearLayout 
+    <LinearLayout
         android:orientation="horizontal"
-        android:background="@drawable/footer"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
-    
-        <Button 
+
+        <Button
             android:id="@+id/positiveButton"
-            android:layout_marginTop="3dip"
+            style="@style/Dialog.Button"
             android:layout_width="0dip"
             android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:singleLine="true"/>
-    
-        <Button 
+            android:layout_height="wrap_content" />
+        <TextView android:id="@+id/v_line_show" style="@style/Dialog.LineV" />
+        <Button
             android:id="@+id/negativeButton"
-            android:layout_marginTop="3dip"
+            style="@style/Dialog.Button"
             android:layout_width="0dip"
             android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:singleLine="true"/>
-    
+            android:layout_height="wrap_content" />
+
     </LinearLayout>
 
 </LinearLayout>

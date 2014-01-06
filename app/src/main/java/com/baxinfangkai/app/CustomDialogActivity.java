@@ -57,8 +57,7 @@ public class CustomDialogActivity extends Activity {
 					.setMessage("Custom body")
 					.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
-							CustomDialogActivity.this
-							.dismissDialog(CUSTOM_DIALOG);
+                            dialog.dismiss();
 						}
 					})
 					.setPositiveButton("Confirm", new DialogInterface.OnClickListener() {

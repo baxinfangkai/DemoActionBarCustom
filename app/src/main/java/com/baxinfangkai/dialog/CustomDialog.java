@@ -168,11 +168,13 @@ public class CustomDialog extends Dialog {
             // instantiate the dialog with the custom Theme
             final CustomDialog dialog = new CustomDialog(context, 
             		R.style.Dialog);
-            View layout = inflater.inflate(R.layout.theme_custom_dialog, null);
+            View layout = inflater.inflate(R.layout.theme_fobme_dialog, null);
             dialog.addContentView(layout, new LayoutParams(
                     LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT));
             // set the dialog title
             ((TextView) layout.findViewById(R.id.title)).setText(title);
+
+            boolean vlineshow = true;
             // set the confirm button
             if (positiveButtonText != null) {
                 ((Button) layout.findViewById(R.id.positiveButton))
@@ -191,6 +193,7 @@ public class CustomDialog extends Dialog {
                 // if no confirm button just set the visibility to GONE
                 layout.findViewById(R.id.positiveButton).setVisibility(
                         View.GONE);
+                vlineshow = false;
             }
             // set the cancel button
             if (negativeButtonText != null) {
@@ -210,7 +213,14 @@ public class CustomDialog extends Dialog {
                 // if no confirm button just set the visibility to GONE
                 layout.findViewById(R.id.negativeButton).setVisibility(
                         View.GONE);
+                vlineshow = false;
             }
+            if(!vlineshow) {
+                layout.findViewById(R.id.v_line_show).setVisibility(View.GONE);
+            } else {
+                layout.findViewById(R.id.v_line_show).setVisibility(View.VISIBLE);
+            }
+
             // set the content message
             if (message != null) {
                 ((TextView) layout.findViewById(

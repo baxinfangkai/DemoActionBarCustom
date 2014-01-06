@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="DialogText">
+        <item name="android:textColor">@color/fobme_dialog_content_text_color</item>
+        <item name="android:textSize">@dimen/fobme_dialog_content_text_size</item>
+        <item name="android:layout_marginTop">@dimen/fobme_dialog_content_margin_top</item>
+        <item name="android:layout_marginBottom">@dimen/fobme_dialog_content_margin_bottom</item>
+        <item name="android:paddingLeft">@dimen/fobme_dialog_content_padding_left</item>
+        <item name="android:paddingRight">@dimen/fobme_dialog_content_padding_right</item>
+    </style>
+
+    <style name="Dialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <!-- 模糊 -->
+        <item name="android:backgroundDimAmount">0.6</item>
+        <!-- 灰度 -->
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 对话框是否有遮盖 -->
+    </style>
+
+    <style name="DialogText.Title">
+        <item name="android:layout_marginTop">@dimen/fobme_dialog_title_margin_top</item>
+        <item name="android:layout_marginBottom">@dimen/fobme_dialog_title_margin_bottom</item>
+        <item name="android:paddingLeft">@dimen/fobme_dialog_title_padding_left</item>
+        <item name="android:paddingRight">@dimen/fobme_dialog_title_padding_right</item>
+        <item name="android:textSize">@dimen/fobme_dialog_title_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Dialog.Button">
+        <item name="android:background">@null</item>
+        <item name="android:layout_marginTop">@dimen/fobme_dialog_btn_margin_top</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/fobme_dialog_btn_color</item>
+    </style>
+
+    <style name="Dialog.LineH">
+        <item name="android:layout_marginLeft">@dimen/fobme_dialog_line_margin_left</item>
+        <item name="android:layout_marginRight">@dimen/fobme_dialog_line_margin_right</item>
+        <item name="android:background">@color/fobme_dialog_line_bg</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/fobme_dialog_line_height</item>
+    </style>
+
+    <style name="Dialog.LineV">
+        <item name="android:layout_marginTop">@dimen/fobme_dialog_line_margin_top</item>
+        <item name="android:layout_marginBottom">@dimen/fobme_dialog_line_margin_bottom</item>
+        <item name="android:background">@color/fobme_dialog_line_bg</item>
+        <item name="android:layout_width">@dimen/fobme_dialog_line_height</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <dimen name="fobme_dialog_title_text_size">20dp</dimen>
+    <dimen name="fobme_dialog_title_margin_top">15dp</dimen>
+    <dimen name="fobme_dialog_title_margin_bottom">15dp</dimen>
+    <dimen name="fobme_dialog_title_padding_left">8dp</dimen>
+    <dimen name="fobme_dialog_title_padding_right">8dp</dimen>
+    <dimen name="fobme_dialog_content_text_size">17dp</dimen>
+    <dimen name="fobme_dialog_content_margin_top">10dp</dimen>
+    <dimen name="fobme_dialog_content_margin_bottom">10dp</dimen>
+    <dimen name="fobme_dialog_content_padding_left">10dp</dimen>
+    <dimen name="fobme_dialog_content_padding_right">10dp</dimen>
+    <color name="fobme_dialog_content_text_color">#FF212121</color>
+    <dimen name="fobme_dialog_btn_margin_top">2dp</dimen>
+    <dimen name="fobme_dialog_content_text_padding">5dp</dimen>
+    <dimen name="fobme_dialog_minwidth">300dp</dimen>
+    <color name="fobme_dialog_line_bg">#FFEFEFEF</color>
+    <dimen name="fobme_dialog_line_height">1dp</dimen>
+    <dimen name="fobme_dialog_line_margin_left">5dp</dimen>
+    <dimen name="fobme_dialog_line_margin_right">5dp</dimen>
+    <dimen name="fobme_dialog_line_margin_top">2dp</dimen>
+    <dimen name="fobme_dialog_line_margin_bottom">5dp</dimen>
+    <color name="fobme_dialog_btn_text_orange">#FFFFAA00</color>
+    <color name="fobme_dialog_btn_text_black">#FF212121</color>
+
+</resources>
